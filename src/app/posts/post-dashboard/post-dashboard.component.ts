@@ -47,7 +47,6 @@ export class PostDashboardComponent implements OnInit {
               if (url) {
                 this.imageURL = url;
               }
-              console.log(this.imageURL);
             })
           })
         )
@@ -61,7 +60,7 @@ export class PostDashboardComponent implements OnInit {
       authorId: this.authService.currentUserId,
       content: this.content,
       image: this.imageURL,
-      published: new Date(),
+      published: Date.now(),
       title: this.title
     };
     this.postService.createPost(newPost);

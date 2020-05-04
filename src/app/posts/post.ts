@@ -5,5 +5,5 @@ export class Post {
   authorId: string;
   content: string;
   image: string;
-  published: any;
+  published: number;
 }

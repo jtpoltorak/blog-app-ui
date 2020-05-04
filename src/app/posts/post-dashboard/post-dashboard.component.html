@@ -1,6 +1,6 @@
 <section>
   <mat-accordion>
-    <mat-expansion-panel>
+    <mat-expansion-panel [expanded]="true">
       <mat-expansion-panel-header>
         <mat-panel-title>
           Create a Post
@@ -24,7 +24,7 @@
         </textarea>
       </mat-form-field>
       <br>
-      <button mat-raised-button color="accent" (click)="onCreatePost()" [disabled]="!title || !content">
+      <button mat-raised-button color="accent" (click)="onCreatePost()" [disabled]="!title || !content || !imageURL">
         {{buttonText}}
       </button>
     </mat-expansion-panel>
